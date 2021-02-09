@@ -1,5 +1,6 @@
 import React from "react"
+import Header from '../components/layout'
 
 export default () =>  {
-  return <div>Home Page!</div>
+  return <Header>Home Page!</Header>
 }

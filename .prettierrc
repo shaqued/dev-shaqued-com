@@ -1,4 +1,13 @@
 {
   "arrowParens": "avoid",
-  "semi": false
+  "semi": false,
+  "prettier.singleQuote": true,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.js", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
 }
