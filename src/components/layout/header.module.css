@@ -10,15 +10,6 @@
   height: 10%;
   position: fixed;
 }
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-.button {
-  display: flex;
-  margin: 0.5em;
-}
 .content {
   display: flex;
   margin-top: 10%;

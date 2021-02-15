@@ -13,25 +13,9 @@
   overflow-x: hidden;
   transition: 0.5s;
 }
-.hamburger {
-  display: flex;
-  font-size: larger;
-  padding: 10px;
-}
 .mobileNavbar {
   top: 25%;
   width: 100%;
-}
-.button {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: palevioletred;
-  display: block;
-  transition: 0.3s;
-}
-.closeButton {
   display: flex;
-  font-size: larger;
-  padding: 10px;
+  justify-content: flex-end;
 }

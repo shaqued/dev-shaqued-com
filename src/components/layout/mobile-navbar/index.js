@@ -1,36 +1,26 @@
 import React, { useState } from 'react'
-import { GiHamburgerMenu } from 'react-icons/gi'
-import { GrClose } from 'react-icons/gr'
-import { Link } from 'gatsby'
+import { IconButton } from '@material-ui/core'
+import { Menu, Close } from '@material-ui/icons'
 import styles from './mobile-navbar.module.css'
 
-export default ({ buttons }) => {
+export default ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleClickOpen = () => {
-    console.log(isOpen)
     setIsOpen(!isOpen)
   }
 
   return (
     <div className={styles.mobileNavbar}>
-      <GiHamburgerMenu
-        className={styles.hamburger}
-        onClick={() => handleClickOpen()}
-      />
-
+      <IconButton onClick={() => handleClickOpen()}>
+        <Menu />
+      </IconButton>
       {isOpen ? (
         <div className={styles.mobiledrawer}>
-          <GrClose
-            className={styles.closeButton}
-            onClick={() => handleClickOpen()}
-          />
-          
-          {buttons.map(button => (
-            <div key={button} className={styles.button}>
-              <Link to={`/${button}`}>{button}</Link>
-            </div>
-          ))}
+          <IconButton onClick={() => handleClickOpen()}>
+            <Close />
+          </IconButton>
+          {children}
         </div>
       ) : (
         <div></div>

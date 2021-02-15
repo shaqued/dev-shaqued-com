@@ -2,17 +2,36 @@ import React from 'react'
 import styles from './header.module.css'
 import MobileNavbar from './mobile-navbar/index'
 import Navbar from './navbar/index'
+import { ThemeProvider } from '@material-ui/core/styles'
+import { Link } from 'gatsby'
+import { Button, CssBaseline, Hidden } from '@material-ui/core'
+import theme from '../../styles/theme'
 
 export default ({ children }) => {
-  const buttons = ['about', 'resume', 'projects']
+  const buttons = ['about', 'resume', 'projects'].map(button => (
+    <Button key={button} component={Link} to={`/${button}`}>
+      {button}
+    </Button>
+  ))
 
   return (
-    <div className={styles.layout}>
-      <div className={styles.header}>
-        <MobileNavbar buttons={buttons}></MobileNavbar>
-        <Navbar buttons={buttons}></Navbar>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className={styles.layout}>
+        <div className={styles.header}>
+          <Hidden smUp>
+            <MobileNavbar>
+              {buttons}
+            </MobileNavbar>
+          </Hidden>
+          <Hidden xsDown>
+            <Navbar>
+              {buttons}
+            </Navbar>
+          </Hidden>
+        </div>
+        <div className={styles.content}>{children}</div>
       </div>
-      <div className={styles.content}>{children}</div>
-    </div>
+    </ThemeProvider>
   )
 }
