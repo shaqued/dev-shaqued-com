@@ -1,6 +1,12 @@
-import React from "react"
-import Header from '../components/layout'
+import React from 'react'
+import Layout from '../components/layout'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from '../styles/theme'
 
-export default () =>  {
-  return <Header>Home Page!</Header>
+export default () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Layout>Home Page!</Layout>
+    </ThemeProvider>
+  )
 }
