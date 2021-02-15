@@ -15,20 +15,11 @@
   justify-content: flex-end;
   width: 100%;
 }
-.mobileNavbar {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
 .button {
   display: flex;
   margin: 0.5em;
 }
 .content {
   display: flex;
-  margin-top: 10%;
-}
-.mobiledrawer{
-  background-color: black;
   margin-top: 10%;
 }
