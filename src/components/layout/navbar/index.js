@@ -1,6 +1,8 @@
 import React from 'react'
-import styles from './navBar.module.css'
+import useStyles from './navbar.css'
 
 export default ({ children }) => {
+  const styles = useStyles()
+
   return <div className={styles.navbar}>{children}</div>
 }

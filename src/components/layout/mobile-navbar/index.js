@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { IconButton } from '@material-ui/core'
 import { Menu, Close } from '@material-ui/icons'
-import styles from './mobile-navbar.module.css'
+import useStyles from './mobile-navbar.css'
 
 export default ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const styles = useStyles()
   const handleClickOpen = () => {
     setIsOpen(!isOpen)
   }

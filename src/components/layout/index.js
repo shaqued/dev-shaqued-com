@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './header.module.css'
+import useStyles from './layout.css'
 import MobileNavbar from './mobile-navbar/index'
 import Navbar from './navbar/index'
 import { ThemeProvider } from '@material-ui/core/styles'
@@ -8,6 +8,8 @@ import { Button, CssBaseline, Hidden } from '@material-ui/core'
 import theme from '../../styles/theme'
 
 export default ({ children }) => {
+  const styles = useStyles();
+  
   const buttons = ['about', 'resume', 'projects'].map(button => (
     <Button key={button} component={Link} to={`/${button}`}>
       {button}
