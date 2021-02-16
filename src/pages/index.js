@@ -8,17 +8,12 @@ import {
   IconButton,
   Button,
   Snackbar,
-  Slide,
 } from '@material-ui/core'
 import FeatherIcon from 'feather-icons-react'
 
 export default () => {
   const styles = useStyles()
   const [snackbarOpen, setSnackbarOpen] = useState(false)
-
-  function SlideTransition(props) {
-    return <Slide {...props} direction="up" />
-  }
 
   const externalReferences = [
     { icon: 'linkedin', link: 'https://linkedin.com/in/shaqued' },
@@ -44,47 +39,50 @@ export default () => {
     <Layout>
       <Box className={styles.home}>
         <Box className={styles.intro}>
-          <img src={profilePhoto} className={styles.image} />
+          <img src={profilePhoto} className={styles.image} alt="shaqued" />
           <Typography variant="h2" color="primary">
-            {"Hi, I'm Shaqued"}
+            Hi, I'm Shaqued
           </Typography>
-          <Box className={styles.secondRow}>
-            <Typography variant="h2" color="secondary">
-              {"and i'm a"}
+          <Typography variant="h2" color="secondary" display="inline">
+            and i'm a {' '}
+            <Typography variant="h2" color="textPrimary" display="inline">
+              software engineer
             </Typography>
-            <Typography variant="h2" className={styles.softwareEngineer}>
-              &nbsp; {' software engineer'}
-            </Typography>
-          </Box>
+          </Typography>
         </Box>
         <Box>
-          <Button onClick={() => copyMailToClipboard()}>
+          <IconButton onClick={() => copyMailToClipboard()}>
             <FeatherIcon icon="mail" />
-          </Button>
+          </IconButton>
           {externalReferences.map(button => (
-            <a key={button} target="_blank" href={`${button.link}`}>
+            <a
+              key={button}
+              rel="noopener noreferrer"
+              target="_blank"
+              href={`${button.link}`}
+            >
               <IconButton>
                 <FeatherIcon icon={`${button.icon}`} />
               </IconButton>
             </a>
           ))}
         </Box>
-          <Snackbar
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            open={snackbarOpen}
-            onClose={toggleSnackbar}
-            message="mail copied to clipboard!"
-            action={
-              <React.Fragment>
-                <IconButton onClick={toggleSnackbar}>
-                  <FeatherIcon icon="x" />
-                </IconButton>
-              </React.Fragment>
-            }
-          />
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          open={snackbarOpen}
+          onClose={toggleSnackbar}
+          message="mail copied to clipboard!"
+          action={
+            <React.Fragment>
+              <IconButton onClick={toggleSnackbar}>
+                <FeatherIcon icon="x" />
+              </IconButton>
+            </React.Fragment>
+          }
+        />
       </Box>
     </Layout>
   )

@@ -33,6 +33,10 @@ export default responsiveFontSizes(
       background: {
         default: grey[900],
       },
+      text: {
+        primary: green[300],
+        secondary: orange[300],
+      },
     },
     props: {
       MuiLink: {
@@ -54,7 +58,7 @@ export default responsiveFontSizes(
       MuiSnackbarContent: {
         root: {
           backgroundColor: grey[700],
-          color: 'white'
+          color: 'white',
         },
       },
     },
@@ -74,27 +78,42 @@ export default responsiveFontSizes(
       },
       h1: {
         fontWeight: 'bold',
+        color: 'white',
       },
       h2: {
         fontWeight: 'normal',
+        color: 'white',
       },
       h3: {
         fontWeight: 'bold',
+        color: 'white',
       },
       h4: {
         fontWeight: 'bold',
+        color: 'white',
       },
       h5: {
         fontWeight: 'bold',
+        color: 'white',
       },
       h6: {
         fontWeight: 'bold',
+        color: 'white',
       },
       subtitle1: {
         fontWeight: 'normal',
+        fontSize: 'larger',
+        color: 'white',
       },
       subtitle2: {
         fontWeight: 'normal',
+        color: 'white',
+      },
+      body1: {
+        color: 'white',
+      },
+      body2: {
+        color: orange[300],
       },
     },
   })

@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles'
-import { green } from '@material-ui/core/colors'
 
 export default makeStyles(theme => ({
   home:{
@@ -18,11 +17,5 @@ export default makeStyles(theme => ({
   },
   image: {
     height: '60%',
-  },
-  secondRow: {
-    display: 'flex',
-  },
-  softwareEngineer: {
-    color: green[300],
   },
 }))

@@ -17,5 +17,6 @@ export default makeStyles(theme => ({
     display: 'flex',
     paddingTop: '5%',
     height: '90%',
+    justifyContent: 'center'
   },
 }))
