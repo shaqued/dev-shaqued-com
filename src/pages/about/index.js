@@ -13,7 +13,10 @@ export default () => {
         <img alt="shaqued" src={portrait} className={styles.image} />
         <Box>
           <Typography variant={'h2'} className={styles.title}>
-            {`My name is Shaqued Gavriel`}
+            My name is
+          </Typography>
+          <Typography variant={'h2'} className={styles.title} gutterBottom>
+            Shaqued Gavriel
           </Typography>
           <Typography variant={'h6'} display="inline">
             I'm a{' '}
@@ -34,8 +37,8 @@ export default () => {
           <Typography color="primary" display="inline">
             BSc in Computer Science
           </Typography>
-          <Typography variant={'body1'}>
-            . When I'm not coding, or sleeping, you can find me exploring{' '}
+          <Typography variant={'body1'} display="inline">
+            . <br /> When I'm not coding, or sleeping, you can find me exploring{' '}
           </Typography>
           <Typography color="textPrimary" display="inline">
             sustainabilty

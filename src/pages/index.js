@@ -57,7 +57,7 @@ export default () => {
           </IconButton>
           {externalReferences.map(button => (
             <a
-              key={button}
+              key={button.icon}
               rel="noopener noreferrer"
               target="_blank"
               href={`${button.link}`}

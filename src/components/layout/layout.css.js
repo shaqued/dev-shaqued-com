@@ -16,6 +16,7 @@ export default makeStyles(theme => ({
   content: {
     display: 'flex',
     paddingTop: '5%',
+    marginBottom: '10%',
     height: '90%',
     justifyContent: 'center'
   },
