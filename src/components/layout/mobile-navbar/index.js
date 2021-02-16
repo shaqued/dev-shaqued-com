@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { IconButton } from '@material-ui/core'
+import { IconButton, Button } from '@material-ui/core'
 import { Menu, Close } from '@material-ui/icons'
+import { Link } from 'gatsby'
 import useStyles from './mobile-navbar.css'
 
 export default ({ children }) => {
@@ -20,6 +21,9 @@ export default ({ children }) => {
           <IconButton onClick={() => handleClickOpen()}>
             <Close />
           </IconButton>
+          <Button component={Link} to={'/'}>
+            Home
+          </Button>
           {children}
         </div>
       ) : (
