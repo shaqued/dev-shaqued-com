@@ -51,6 +51,12 @@ export default responsiveFontSizes(
           color: 'white',
         },
       },
+      MuiSnackbarContent: {
+        root: {
+          backgroundColor: grey[700],
+          color: 'white'
+        },
+      },
     },
     typography: {
       fontFamily: [
@@ -70,7 +76,7 @@ export default responsiveFontSizes(
         fontWeight: 'bold',
       },
       h2: {
-        fontWeight: 'bold',
+        fontWeight: 'normal',
       },
       h3: {
         fontWeight: 'bold',

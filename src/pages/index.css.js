@@ -2,7 +2,14 @@ import { makeStyles } from '@material-ui/core/styles'
 import { green } from '@material-ui/core/colors'
 
 export default makeStyles(theme => ({
-  home: {
+  home:{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+  intro: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
