@@ -16,10 +16,12 @@ export default () => {
             {`My name is Shaqued Gavriel`}
           </Typography>
           <Typography variant={'h6'} display="inline">
-            I'm a {' '}
-            <Typography variant={'h6'} color="primary" display="inline">
-              full stack developer
-            </Typography>
+            I'm a{' '}
+          </Typography>
+          <Typography variant={'h6'} color="primary" display="inline">
+            full stack developer
+          </Typography>
+          <Typography variant={'h6'} display="inline">
             , based in Israel
           </Typography>
           <Typography variant={'body1'}>
@@ -27,27 +29,26 @@ export default () => {
           </Typography>
           <Typography variant={'body1'} display="inline">
             I spent the last few years serving as a software engineer in the
-            IDF, and finishing my {' '}
-            <Typography color="primary" display="inline">
-              BSc in Computer Science
-            </Typography>
+            IDF, and finishing my{' '}
           </Typography>
-          .
+          <Typography color="primary" display="inline">
+            BSc in Computer Science
+          </Typography>
           <Typography variant={'body1'}>
-            When I'm not coding, or sleeping, you can find me exploring {' '}
-            <Typography color="textPrimary" display="inline">
-              sustainabilty
-            </Typography>
-            , practicing {' '}
-            <Typography color="textSecondary" display="inline">
-              aerial yoga
-            </Typography>
-            , reading tons of {' '}
-            <Typography color="secondary" display="inline">
-              books
-            </Typography>
-            , and traveling the land.
+            . When I'm not coding, or sleeping, you can find me exploring{' '}
           </Typography>
+          <Typography color="textPrimary" display="inline">
+            sustainabilty
+          </Typography>
+          <Typography display="inline">, practicing </Typography>
+          <Typography color="textSecondary" display="inline">
+            aerial yoga
+          </Typography>
+          <Typography display="inline">, reading tons of </Typography>
+          <Typography color="secondary" display="inline">
+            books
+          </Typography>
+          <Typography display="inline">, and traveling the land.</Typography>
         </Box>
       </Box>
     </Layout>

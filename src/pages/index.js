@@ -6,7 +6,6 @@ import {
   Box,
   Typography,
   IconButton,
-  Button,
   Snackbar,
 } from '@material-ui/core'
 import FeatherIcon from 'feather-icons-react'
@@ -43,12 +42,14 @@ export default () => {
           <Typography variant="h2" color="primary">
             Hi, I'm Shaqued
           </Typography>
-          <Typography variant="h2" color="secondary" display="inline">
-            and i'm a {' '}
+          <Box flexDirection="row">
+            <Typography variant="h2" color="secondary" display="inline">
+              and i'm a{' '}
+            </Typography>
             <Typography variant="h2" color="textPrimary" display="inline">
               software engineer
             </Typography>
-          </Typography>
+          </Box>
         </Box>
         <Box>
           <IconButton onClick={() => copyMailToClipboard()}>

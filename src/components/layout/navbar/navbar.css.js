@@ -9,7 +9,7 @@ export default makeStyles(theme => ({
   },
   logo: {
     maxHeight: '60px',
-    marginLeft: theme.spacing(2),
+    margin: theme.spacing(2),
   },
   header: {
     display: 'flex',
