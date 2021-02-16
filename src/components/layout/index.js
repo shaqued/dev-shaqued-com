@@ -21,12 +21,12 @@ export default ({ children }) => {
       <CssBaseline />
       <div className={styles.layout}>
         <div className={styles.header}>
-          <Hidden smUp>
+          <Hidden mdUp>
             <MobileNavbar>
               {buttons}
             </MobileNavbar>
           </Hidden>
-          <Hidden xsDown>
+          <Hidden smDown>
             <Navbar>
               {buttons}
             </Navbar>
