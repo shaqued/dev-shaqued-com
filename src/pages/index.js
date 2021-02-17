@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Layout from '../components/layout'
 import profilePhoto from '../../static/circle-cropped.png'
-import useStyles from './index.css'
 import { Box, IconButton, Snackbar } from '@material-ui/core'
 import FeatherIcon from 'feather-icons-react'
 import NeonHeader from '../components/neon-header'
 import { pink, lightBlue, green } from '@material-ui/core/colors'
+import { makeStyles } from '@material-ui/core/styles'
 
 export default () => {
   const styles = useStyles()
@@ -89,3 +89,27 @@ export default () => {
     </Layout>
   )
 }
+
+const useStyles = makeStyles(theme => ({
+  home: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%',
+    maxHeight: '90%',
+  },
+  intro: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '100%',
+    maxHeight: '100%',
+  },
+  image: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '5%',
+    },
+    marginBottom: '2%',
+    height: '60%',
+  },
+}))
