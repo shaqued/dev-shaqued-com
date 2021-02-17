@@ -2,13 +2,10 @@ import React, { useState } from 'react'
 import Layout from '../components/layout'
 import profilePhoto from '../../static/circle-cropped.png'
 import useStyles from './index.css'
-import {
-  Box,
-  Typography,
-  IconButton,
-  Snackbar,
-} from '@material-ui/core'
+import { Box, IconButton, Snackbar } from '@material-ui/core'
 import FeatherIcon from 'feather-icons-react'
+import NeonHeader from '../components/neon-header'
+import { pink, lightBlue, green } from '@material-ui/core/colors'
 
 export default () => {
   const styles = useStyles()
@@ -39,16 +36,20 @@ export default () => {
       <Box className={styles.home}>
         <Box className={styles.intro}>
           <img src={profilePhoto} className={styles.image} alt="shaqued" />
-          <Typography variant="h2" color="primary">
+          <NeonHeader variant={'h2'} color={pink[300]}>
             Hi, I'm Shaqued
-          </Typography>
+          </NeonHeader>
           <Box flexDirection="row">
-            <Typography variant="h2" color="secondary" display="inline">
+            <NeonHeader
+              variant={'h2'}
+              color={lightBlue[300]}
+              display={'inline'}
+            >
               and i'm a{' '}
-            </Typography>
-            <Typography variant="h2" color="textPrimary" display="inline">
+            </NeonHeader>
+            <NeonHeader variant={'h2'} color={green[300]} display={'inline'}>
               software engineer
-            </Typography>
+            </NeonHeader>
           </Box>
         </Box>
         <Box>

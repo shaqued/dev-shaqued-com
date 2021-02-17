@@ -4,7 +4,7 @@ export default makeStyles(theme => ({
   resume: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
+    height: '98%',
     width: '100%',
   },
   row: {

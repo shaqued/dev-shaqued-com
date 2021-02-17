@@ -1,6 +1,6 @@
 import React from 'react'
 import useStyles from './resume-section.css'
-import { Box, Typography } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 
 export default ({color, title}) => {
   const styles = useStyles({color})

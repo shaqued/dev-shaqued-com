@@ -8,8 +8,8 @@ import { Button, CssBaseline, Hidden } from '@material-ui/core'
 import theme from '../../styles/theme'
 
 export default ({ children }) => {
-  const styles = useStyles();
-  
+  const styles = useStyles()
+
   const buttons = ['about', 'resume', 'projects'].map(button => (
     <Button key={button} component={Link} to={`/${button}`}>
       {button}
@@ -22,14 +22,10 @@ export default ({ children }) => {
       <div className={styles.layout}>
         <div className={styles.header}>
           <Hidden mdUp>
-            <MobileNavbar>
-              {buttons}
-            </MobileNavbar>
+            <MobileNavbar>{buttons}</MobileNavbar>
           </Hidden>
           <Hidden smDown>
-            <Navbar>
-              {buttons}
-            </Navbar>
+            <Navbar>{buttons}</Navbar>
           </Hidden>
         </div>
         <div className={styles.content}>{children}</div>
