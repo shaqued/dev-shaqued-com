@@ -101,19 +101,18 @@ export default responsiveFontSizes(
         color: 'white',
       },
       subtitle1: {
-        fontWeight: 'normal',
-        fontSize: 'larger',
         color: 'white',
+        fontSize: '0.8rem'
       },
       subtitle2: {
-        fontWeight: 'normal',
         color: 'white',
       },
       body1: {
         color: 'white',
       },
       body2: {
-        color: orange[300],
+        color: 'white',
+        fontWeight: '300',
       },
     },
   })

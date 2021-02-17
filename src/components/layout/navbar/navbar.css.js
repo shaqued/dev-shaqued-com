@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import {grey} from '@material-ui/core/colors'
 
 export default makeStyles(theme => ({
   navbar: {
@@ -16,5 +17,6 @@ export default makeStyles(theme => ({
     flexDirection: 'row',
     width: '100%',
     justifyContent: 'space-between',
+    backgroundColor: grey[900],
   },
 }))
