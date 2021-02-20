@@ -108,8 +108,9 @@ const useStyles = makeStyles(theme => ({
   image: {
     [theme.breakpoints.down('sm')]: {
       marginTop: '5%',
+      maxWidth: '80%'
     },
     marginBottom: '2%',
-    height: '60%',
+    maxHeight: '60%',
   },
 }))
