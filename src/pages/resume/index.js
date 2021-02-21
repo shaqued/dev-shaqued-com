@@ -2,10 +2,10 @@ import React from 'react'
 import ResumeSection from '../../components/resume/resume-section'
 import Layout from '../../components/layout'
 import { Box, Typography, IconButton, Tooltip } from '@material-ui/core'
-import { pink, lightBlue, green, amber } from '@material-ui/core/colors'
 import SectionData from '../../components/resume/sections-data'
 import FeatherIcon from 'feather-icons-react'
 import { makeStyles } from '@material-ui/core/styles'
+import resumeColors from '../../components/resume/resume-colors.const';
 
 export default () => {
   const styles = useStyles()
@@ -18,11 +18,13 @@ export default () => {
         when="2017-2020"
         data="Develop a javascript based web application, “AllRight”, as an online platform for the acquiring of copyrighted content licenses. 
 The app was built using React, Node, and MongoDB."
+        color={resumeColors.education}
       />
       <SectionData
         what="IDF Programming Course"
         where="BASMACH IDF School for Computer Professions"
         when="SEPTEMBER 2015 - MARCH 2016"
+        color={resumeColors.education}
       />
     </div>
   )
@@ -33,6 +35,7 @@ The app was built using React, Node, and MongoDB."
         what="Full stack developer"
         where="IDF, Lotem"
         when="MARCH 2016 - JUNE 2020"
+        color={resumeColors.experience}
         data={
           <ul style={{ padding: 0 }}>
             Served as a software developer in a top-secret unit in the IDF.
@@ -73,6 +76,7 @@ The app was built using React, Node, and MongoDB."
         what="Emissary for Chicago"
         where="The Jewish Agency for Israel"
         when="AUGUST 2014 - AUGUST 2015"
+        color={resumeColors.volunteer}
         data="Work in the Jewish communities of Chicago, to establish deeper relationships with Israel. Involve in public diplomacy, education, and event planning."
       />
     </div>
@@ -80,7 +84,7 @@ The app was built using React, Node, and MongoDB."
 
   const skillsData = (
     <div>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" color="primary" gutterBottom>
         Javascript, C#.NET, HTML,
       </Typography>
       <Typography variant="body1" gutterBottom>
@@ -98,12 +102,12 @@ The app was built using React, Node, and MongoDB."
   const sectionsFirstRow = [
     {
       title: 'experience',
-      color: green[300],
+      color: resumeColors.experience,
       data: experienceData,
     },
     {
       title: 'education',
-      color: lightBlue[300],
+      color: resumeColors.education,
       data: educationData,
     },
   ]
@@ -111,12 +115,12 @@ The app was built using React, Node, and MongoDB."
   const sectionsSecondRow = [
     {
       title: 'volunteer',
-      color: amber[300],
+      color: resumeColors.volunteer,
       data: volunteerData,
     },
     {
       title: 'skills',
-      color: pink[300],
+      color: resumeColors.skills,
       data: skillsData,
     },
   ]

@@ -3,10 +3,15 @@ import Layout from '../../components/layout'
 import { Box, Typography } from '@material-ui/core'
 import portrait from '../../../static/my-portrait.png'
 import { makeStyles } from '@material-ui/core/styles'
-
+import { pink, lightBlue, green, amber } from '@material-ui/core/colors'
 
 export default () => {
-  const styles = useStyles()
+  const color = amber[300];
+  const styles = useStyles(({color}))
+
+  const handleHover = (color) => {
+    console.log(color)
+  }
 
   return (
     <Layout>
@@ -41,7 +46,11 @@ export default () => {
           <Typography variant={'body1'} display="inline">
             . <br /> When I'm not coding, or sleeping, you can find me exploring{' '}
           </Typography>
-          <Typography color="textPrimary" display="inline">
+          <Typography
+            color="textPrimary"
+            display="inline"
+            onMouseEnter={() => handleHover()}
+          >
             sustainabilty
           </Typography>
           <Typography display="inline">, practicing </Typography>
@@ -73,8 +82,15 @@ const useStyles = makeStyles(theme => ({
   image: {
     maxHeight: '260px',
     [theme.breakpoints.up('md')]: {
-      paddingRight: '60px',
+      marginRight: '60px',
     },
+    border: 'solid',
+    borderWidth: 'thin',
+    borderRadius: '500px',
+    boxShadow: ({color}) => `0 0 .2rem #fff,
+            inset 0 0 .2rem #fff,
+            0 0 1rem ${color}`,
+    borderColor: 'white',
   },
   title: {
     [theme.breakpoints.down('sm')]: {
