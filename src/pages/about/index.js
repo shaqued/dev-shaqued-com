@@ -7,16 +7,23 @@ import Keyword from '../../components/about/keyword'
 
 export default () => {
   const [color, setColor] = useState('white')
+  const [image, setImage] = useState(portrait)
   const styles = useStyles(({color}))
 
-  const handleHover = color => {
+  const handleHover = (color, image) => {
     setColor(color || 'white')
+    setImage(image || portrait)
   }
+
+  const handleOnClick = (color, image) => {
+    handleHover(color, image);
+    setTimeout(() => handleHover(), 5000)
+  };
 
   return (
     <Layout>
       <Box className={styles.content}>
-        <img alt="shaqued" src={portrait} className={styles.image} />
+        <img alt="shaqued" src={image} className={styles.image} />
         <Box>
           <Typography variant={'h2'} className={styles.title}>
             My name is
@@ -46,15 +53,27 @@ export default () => {
           <Typography variant={'body1'} display="inline">
             . <br /> When I'm not coding, or sleeping, you can find me exploring{' '}
           </Typography>
-          <Keyword keyword="sustainability" handleHover={handleHover}>
+          <Keyword
+            keyword="sustainability"
+            handleHover={handleHover}
+            handleOnClick={handleOnClick}
+          >
             sustainability
           </Keyword>
           <Typography display="inline">, practicing </Typography>
-          <Keyword keyword="aerialYoga" handleHover={handleHover}>
+          <Keyword
+            keyword="aerialYoga"
+            handleHover={handleHover}
+            handleOnClick={handleOnClick}
+          >
             aerial yoga
           </Keyword>
           <Typography display="inline">, reading tons of </Typography>
-          <Keyword keyword="books" handleHover={handleHover}>
+          <Keyword
+            keyword="books"
+            handleHover={handleHover}
+            handleOnClick={handleOnClick}
+          >
             books
           </Keyword>
           <Typography display="inline">, and traveling the land.</Typography>
