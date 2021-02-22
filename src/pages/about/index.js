@@ -1,16 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Layout from '../../components/layout'
 import { Box, Typography } from '@material-ui/core'
 import portrait from '../../../static/my-portrait.png'
 import { makeStyles } from '@material-ui/core/styles'
-import { pink, lightBlue, green, amber } from '@material-ui/core/colors'
+import Keyword from '../../components/about/keyword'
 
 export default () => {
-  const color = amber[300];
+  const [color, setColor] = useState('white')
   const styles = useStyles(({color}))
 
-  const handleHover = (color) => {
-    console.log(color)
+  const handleHover = color => {
+    setColor(color || 'white')
   }
 
   return (
@@ -46,21 +46,17 @@ export default () => {
           <Typography variant={'body1'} display="inline">
             . <br /> When I'm not coding, or sleeping, you can find me exploring{' '}
           </Typography>
-          <Typography
-            color="textPrimary"
-            display="inline"
-            onMouseEnter={() => handleHover()}
-          >
-            sustainabilty
-          </Typography>
+          <Keyword keyword="sustainability" handleHover={handleHover}>
+            sustainability
+          </Keyword>
           <Typography display="inline">, practicing </Typography>
-          <Typography color="textSecondary" display="inline">
+          <Keyword keyword="aerialYoga" handleHover={handleHover}>
             aerial yoga
-          </Typography>
+          </Keyword>
           <Typography display="inline">, reading tons of </Typography>
-          <Typography color="secondary" display="inline">
+          <Keyword keyword="books" handleHover={handleHover}>
             books
-          </Typography>
+          </Keyword>
           <Typography display="inline">, and traveling the land.</Typography>
         </Box>
       </Box>
